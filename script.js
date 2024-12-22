@@ -67,7 +67,8 @@ function addDetails(fname, lname, mail, password) {
     });
     window.alert("Successfully Submitted \n" + `Your Serial No is ${sno} !`);
     sno++;
-    console.log(details);
+    console.clear();
+    console.table(details);
 
 }
 
@@ -85,7 +86,7 @@ document.getElementById("submit").onclick = () => {
         lname = validateName(document.getElementById("lname").value.trim(), "Last Name")
     }
     if (fname != undefined && lname != undefined) {
-        mail = validateMail(document.getElementById("mail").value.trim());
+        mail = validateMail(document.getElementById("mail").value.trim().toLowerCase());
     }
     if (fname != undefined && lname != undefined && mail != undefined) {
         password = validatePassword(document.getElementById("password").value.trim());
