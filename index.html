@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <center>
-        <form action="">
-            <fieldset style="margin-left: 30%; margin-right: 30%; padding-bottom: 27%;">
+<body>    
+        <div class="div">
+        <button class="clickevent" id="login" onclick="choice(event,'login')" style="background-color: aqua;">Log In</button>
+        <button class="clickevent" id="signup" onclick="choice(event,'signup')" style="background-color: gray;">Sign Up</button>
+        </div>
+        <form action="" class="maincontent" id="fform">
+            <fieldset style="padding-bottom: 30%;" class="content" id="ffieldset">
                 <table style="padding-top: 2%;">
                     <tr>
                         <td colspan="3" style="text-align: center;">
@@ -21,7 +25,7 @@
                         <td>
                             <label for="fname">First Name</label>
                         </td>
-                        <td></td>
+                        <td>:</td>
                         <td>
                             <input type="text" id="fname" name="fname1" maxlength="20"
                                 placeholder="Enter Your First Name">
@@ -31,7 +35,7 @@
                         <td>
                             <label for="lname">Last Name</label>
                         </td>
-                        <td></td>
+                        <td>:</td>
                         <td>
                             <input type="text" id="lname" name="lname1" maxlength="20"
                                 placeholder="Enter Your Last Name">
@@ -41,7 +45,7 @@
                         <td>
                             <label for="mail">Mail Id</label>
                         </td>
-                        <td></td>
+                        <td>:</td>
                         <td>
                             <input type="text" id="mail" name="mail1" placeholder="Enter Mail Id" maxlength="30">
                         </td>
@@ -50,7 +54,7 @@
                         <td>
                             <label for="password">Password</label>
                         </td>
-                        <td></td>
+                        <td>:</td>
                         <td>
                             <input type="password" id="password" name="password1" placeholder="Enter password">
                         </td>
@@ -63,7 +67,37 @@
                 </table>
             </fieldset>
         </form>
-    </center>
+        <form action="" class="maincontent" id="sform">
+            <fieldset style="padding-bottom: 43%; background-color: rgb(235, 73, 73);" class="content" id="sfieldset">
+                <table style="margin-top: 70px;" id="secondtable">
+                    <tr>
+                        <td colspan="3" style="text-align: center;">
+                            <h1 id="your_name">Welcome</h1>
+                        </td>
+                    <tr>
+                        <td>
+                            <label for="loginmail">Enter mail</label>                            
+                        </td>
+                        <td>:</td>
+                        <td>
+                            <input type="text" id="loginmail" maxlength="30" placeholder="Enter Mail Id">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="loginpassword">Password</label></td>
+                        <td>:</td>
+                        <td><input type="password" id="loginpassword" placeholder="Enter password"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <button id="loginbutton">Log in</button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
     <script src="script.js"></script>
 </body>
 
